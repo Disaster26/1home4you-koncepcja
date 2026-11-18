@@ -95,7 +95,9 @@ section{scroll-margin-top:76px}
 .uwaga{margin-left:auto;font-size:14px;color:var(--tekst2)}
 
 /* rzuty - sekcja z dachem */
-.rzuty{position:relative;background:var(--granat);color:#fff;padding:clamp(110px,12vw,190px) 0 clamp(72px,9vw,128px);clip-path:polygon(0 clamp(40px,6vw,110px),50% 0,100% clamp(40px,6vw,110px),100% 100%,0 100%);margin-top:-1px}
+.rzuty{position:relative;background:var(--szary);color:#fff;padding:clamp(110px,12vw,190px) 0 clamp(72px,9vw,128px)}
+.rzuty::before{content:"";position:absolute;inset:0;background:var(--granat);clip-path:polygon(0 clamp(40px,6vw,110px),50% 0,100% clamp(40px,6vw,110px),100% 100%,0 100%)}
+.rzuty>.wrap{position:relative;z-index:1}
 .rzuty .glowa p{color:#C9CED8}
 .zakl{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
 .zakl button{min-height:48px;padding:0 20px;border:1px solid rgba(255,255,255,.28);background:none;color:#fff;font:600 15px/1 "Montserrat",sans-serif;border-radius:2px;cursor:pointer}
