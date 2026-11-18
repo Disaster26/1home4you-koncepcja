@@ -1,0 +1,5 @@
+s=open('src.html',encoding='utf-8').read()
+s=s.replace('{{BADGE_STYLE}}',open('badge_style.part',encoding='utf-8').read().replace('<style>','').replace('</style>',''))
+s=s.replace('{{BADGE_LINK}}',open('badge_link.part',encoding='utf-8').read())
+s=s.replace('{{OKNO}}','<svg class="okno" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="8" height="8"/><rect x="12" y="2" width="8" height="8"/><rect x="2" y="12" width="8" height="8"/><rect x="12" y="12" width="8" height="8"/></svg>')
+open('index.html','w',encoding='utf-8').write(s)

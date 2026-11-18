@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1Home4You - domy w zabudowie bliźniaczej pod Legnicą | Osiedle Nowy Bobrów</title>
+<meta name="description" content="1Home4You buduje domy w zabudowie bliźniaczej pod Legnicą. Osiedle Nowy Bobrów: dom z garażem, działka ponad 4 ary, prąd, woda i kanalizacja doprowadzone. Rzuty, wizualizacje, kontakt.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#252A36">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/montserrat-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-m-480.webp" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-760.webp 760w, img/hero-m-1000.webp 1000w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-960.webp 960w, img/hero-1280.webp 1280w, img/hero-1600.webp 1600w, img/hero-1920.webp 1920w" imagesizes="100vw" media="(min-width:761px)" fetchpriority="high">
+<style>
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:500 700;font-display:swap;src:url(fonts/montserrat-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00F3,U+2013,U+2018-2019,U+201C-201E,U+2022,U+2026}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:500 700;font-display:swap;src:url(fonts/montserrat-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/manrope-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B2,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+20AC}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/manrope-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--granat:#252A36;--granat2:#1B2029;--zloto:#D6BC76;--zloto-j:#E6D897;--zloto-c:#8A6D2A;--szary:#EEF0F3;--linia:#D9DDE3;--tekst:#1F242E;--tekst2:#535B69;--wrap:min(2040px,100% - 2*clamp(20px,4.5vw,104px))}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--tekst);font:400 17px/1.6 "Manrope",system-ui,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Montserrat","Manrope",sans-serif;font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(28px,3.2vw,46px)}
+h3{font-size:19px;font-weight:600}
+p{margin:0}
+.wrap{width:var(--wrap);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:0 28px;background:var(--zloto);color:var(--granat);font:600 16px/1 "Montserrat",sans-serif;text-decoration:none;border:0;border-radius:2px;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--zloto-j)}
+.btn svg{width:18px;height:12px;flex:none}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:8px 12px}
+
+/* naglowek */
+.top{position:fixed;inset:0 0 auto;z-index:50;transition:background .25s,box-shadow .25s;color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.logo{display:block;width:118px;height:68px;flex:none;background:url(img/logo-bialy.webp) center/contain no-repeat}
+.logo span{position:absolute;left:-9999px}
+.top.jasny{background:#fff;color:var(--granat);box-shadow:0 1px 0 var(--linia)}
+.top.jasny .logo{background-image:url(img/logo-granat.webp)}
+.menu{display:flex;align-items:center;gap:clamp(18px,2.2vw,36px)}
+.menu a{text-decoration:none;font:500 15px/1 "Montserrat",sans-serif}
+.menu a:hover{color:var(--zloto)}
+.top.jasny .menu a:hover{color:var(--zloto-c)}
+.tel{display:inline-flex;align-items:center;gap:10px;font:600 16px/1 "Montserrat",sans-serif;text-decoration:none;white-space:nowrap}
+.tel svg{width:18px;height:18px}
+.burger{display:none;width:48px;height:48px;border:0;background:none;color:inherit;padding:12px;cursor:pointer}
+.burger svg{width:24px;height:24px}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;background:var(--granat)}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture img{object-fit:cover;object-position:52% 50%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(27,32,41,.86) 0%,rgba(27,32,41,.62) 34%,rgba(27,32,41,.08) 62%,rgba(27,32,41,0) 100%),linear-gradient(0deg,rgba(27,32,41,.55) 0%,rgba(27,32,41,0) 30%),linear-gradient(180deg,rgba(27,32,41,.55) 0%,rgba(27,32,41,0) 22%)}
+.hero-in{position:relative;z-index:2;padding:120px 0 clamp(48px,9vh,110px)}
+.dach{display:block;width:clamp(220px,30vw,430px);height:auto;color:var(--zloto);margin:0 0 18px -4px}
+.hero h1{font-size:clamp(34px,4.4vw,68px);max-width:15.5em;font-weight:600}
+.hero h1 span{display:block;font-size:.56em;font-weight:500;margin-top:.5em;color:var(--zloto-j);letter-spacing:0}
+.hero .lead{max-width:36em;margin-top:22px;font-size:clamp(17px,1.25vw,20px);color:#E9ECF1}
+.hero .akcje{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:32px}
+.hero .podpis{position:absolute;z-index:2;text-shadow:0 1px 3px rgba(0,0,0,.6);right:clamp(20px,4.5vw,72px);bottom:18px;font-size:13px;color:rgba(255,255,255,.75)}
+
+/* sekcje */
+section{scroll-margin-top:76px}
+.sek{padding:clamp(72px,9vw,128px) 0}
+.szara{background:var(--szary)}
+.glowa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:end;margin-bottom:clamp(36px,4vw,56px)}
+.glowa p{color:var(--tekst2);font-size:18px;max-width:40em}
+
+/* okno z logo jako znacznik */
+.okno{width:22px;height:22px;flex:none;color:var(--zloto-c)}
+.cechy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--linia)}
+.cecha{display:flex;gap:18px;padding:32px 32px 34px 0;border-bottom:1px solid var(--linia)}
+.cecha:not(:nth-child(3n+1)){padding-left:32px;border-left:1px solid var(--linia)}
+.cecha h3{margin-bottom:8px}
+.cecha p{color:var(--tekst2);font-size:16px}
+
+/* galeria */
+.pas-wrap{position:relative}
+.pas{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 2*20px)/2.35);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;overscroll-behavior-x:contain}
+.pas::-webkit-scrollbar{display:none}
+.pas.ciagnie{cursor:grabbing;scroll-snap-type:none}
+.pas figure{margin:0;scroll-snap-align:start;min-width:0}
+.pas button{display:block;width:100%;padding:0;border:0;background:#dfe3e8;cursor:zoom-in;aspect-ratio:16/10;overflow:hidden}
+.pas img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pas button:hover img{transform:scale(1.03)}
+.pas figcaption{font-size:15px;color:var(--tekst2);padding-top:12px}
+.ster{display:flex;align-items:center;gap:14px;margin-top:26px}
+.ster button{width:48px;height:48px;border:1px solid #BFC5CE;background:#fff;color:var(--granat);border-radius:2px;cursor:pointer;display:grid;place-items:center}
+.ster button:disabled{opacity:.35;cursor:default}
+.ster svg{width:20px;height:20px}
+.licznik{font:600 15px/1 "Montserrat",sans-serif;min-width:4em}
+.uwaga{margin-left:auto;font-size:14px;color:var(--tekst2)}
+
+/* rzuty - sekcja z dachem */
+.rzuty{position:relative;background:var(--granat);color:#fff;padding:clamp(110px,12vw,190px) 0 clamp(72px,9vw,128px);clip-path:polygon(0 clamp(40px,6vw,110px),50% 0,100% clamp(40px,6vw,110px),100% 100%,0 100%);margin-top:-1px}
+.rzuty .glowa p{color:#C9CED8}
+.zakl{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.zakl button{min-height:48px;padding:0 20px;border:1px solid rgba(255,255,255,.28);background:none;color:#fff;font:600 15px/1 "Montserrat",sans-serif;border-radius:2px;cursor:pointer}
+.zakl button[aria-selected="true"]{background:var(--zloto);border-color:var(--zloto);color:var(--granat)}
+.panel{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start}
+.panel[hidden]{display:none}
+.plan{background:#fff;padding:clamp(14px,2vw,28px);display:flex;justify-content:center}
+.plan button{border:0;padding:0;background:none;cursor:zoom-in}
+.plan img{max-height:620px;width:auto}
+.metraz{font:600 clamp(40px,4.6vw,64px)/1 "Montserrat",sans-serif;color:var(--zloto)}
+.metraz small{font-size:.42em;font-weight:500;color:#fff;margin-left:.3em}
+.panel h3{font-size:22px;margin:14px 0 22px}
+.pom{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.18);max-width:560px}
+.pom li{display:grid;grid-template-columns:36px minmax(0,1fr) auto;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.18);font-size:17px}
+.pom b{font:600 14px/1 "Montserrat",sans-serif;color:var(--zloto)}
+.pom span:last-child{font-weight:600;white-space:nowrap}
+.panel .opis{margin-top:22px;color:#C9CED8;max-width:560px}
+
+/* lokalizacja */
+.lok{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,80px);align-items:center}
+.lok-foto{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:16px}
+.lok-foto img{width:100%;height:100%;object-fit:cover;aspect-ratio:auto}
+.lok-foto figure{margin:0}
+.lok-foto figure:first-child img{aspect-ratio:4/3}
+.lok-foto figure:last-child img{aspect-ratio:520/636;height:100%}
+.lok ul{list-style:none;margin:28px 0 32px;padding:0}
+.lok li{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--linia)}
+.lok li:first-child{border-top:1px solid var(--linia)}
+.lok p.lead{color:var(--tekst2);font-size:18px;margin-top:18px}
+.btn-ciemny{background:var(--granat);color:#fff}
+.btn-ciemny:hover{background:#363d4d}
+
+/* firma + kontakt */
+.kontakt{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px)}
+.kontakt .lead{color:var(--tekst2);font-size:18px;margin:18px 0 30px;max-width:34em}
+.dane{display:grid;gap:4px;font-size:18px}
+.dane a{font-weight:600;text-decoration:none}
+.dane .duzy{font:600 clamp(26px,2.4vw,34px)/1.2 "Montserrat",sans-serif;color:var(--granat);margin-bottom:6px}
+.dane .adr{color:var(--tekst2);margin-top:14px}
+.fb{display:inline-block;margin-top:26px;font-weight:600;color:var(--zloto-c)}
+form{background:#fff;padding:clamp(24px,3vw,44px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+form h3{grid-column:1/-1;font-size:22px}
+label{display:grid;gap:7px;font-size:15px;font-weight:600}
+input,select,textarea{width:100%;font:400 16px/1.4 "Manrope",sans-serif;padding:13px 14px;border:1px solid #C3C9D2;border-radius:2px;background:#fff;color:var(--tekst)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--zloto-c);outline-offset:1px;border-color:var(--zloto-c)}
+textarea{min-height:120px;resize:vertical}
+.cale{grid-column:1/-1}
+.zgoda{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14px;color:var(--tekst2)}
+.zgoda input{width:20px;height:20px;margin-top:2px;flex:none}
+.info{grid-column:1/-1;font-size:14px;color:var(--tekst2)}
+.wyslane{grid-column:1/-1;background:var(--szary);padding:14px 16px;font-weight:600}
+
+/* stopka */
+.stopka{background:var(--granat2);color:#AEB4BF;padding:56px 0 28px;font-size:15px}
+.stopka-g{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:32px}
+.stopka .logo{background-image:url(img/logo-zloty.webp);width:132px;height:76px}
+.stopka h4{font:600 15px/1.2 "Montserrat",sans-serif;color:#fff;margin:0 0 14px}
+.stopka a{text-decoration:none}.stopka a:hover{color:#fff}
+.stopka ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.stopka-d{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:22px}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+
+
+/* pasek mobilny */
+.mob{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:80;background:rgba(15,18,24,.94);display:none;align-items:center;justify-content:center;padding:56px 12px}
+.lb.otw{display:flex}
+.lb img{max-width:min(1600px,100%);max-height:100%;width:auto;height:auto;object-fit:contain}
+.lb button{position:absolute;width:52px;height:52px;border:0;background:rgba(255,255,255,.12);color:#fff;border-radius:2px;cursor:pointer;display:grid;place-items:center}
+.lb button svg{width:22px;height:22px}
+.lb .zamk{top:10px;right:10px}.lb .pop{left:10px;top:50%;translate:0 -50%}.lb .nast{right:10px;top:50%;translate:0 -50%}
+
+@media (max-width:1100px){
+ .menu{display:none}
+ .burger{display:block}
+ .top .tel span{display:none}
+ .menu.otw{display:flex;position:fixed;inset:76px 0 auto;flex-direction:column;align-items:stretch;gap:0;background:#fff;color:var(--granat);padding:8px clamp(20px,4.5vw,72px) 24px;box-shadow:0 12px 24px rgba(0,0,0,.12)}
+ .menu.otw a{padding:18px 0;border-bottom:1px solid var(--linia);font-size:18px}
+ .menu.otw a.btn{margin-top:18px;border:0;justify-content:center}
+ .cechy{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .cecha,.cecha:not(:nth-child(3n+1)){padding:28px 24px 30px 0;border-left:0}
+ .cecha:nth-child(2n){padding-left:24px;border-left:1px solid var(--linia)}
+ .panel{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .stopka-g{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .stopka-g>div:first-child{grid-column:1/-1}
+}
+@media (max-width:760px){
+ body{font-size:16px}
+ .top .wrap{height:64px}
+ .logo{width:92px;height:54px}
+ section{scroll-margin-top:64px}
+ .menu.otw{inset:64px 0 auto}
+ .hero{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(30svh,1fr) auto;min-height:100svh}
+ .hero::before{display:none}
+ .hero picture{grid-row:1;grid-column:1;position:relative;inset:auto;height:auto;display:block}
+ .hero picture img{object-position:50% 85%}
+ .hero picture::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,32,41,.65) 0%,rgba(27,32,41,0) 26%,rgba(27,32,41,0) 62%,var(--granat) 100%)}
+ .hero-in{grid-row:2;grid-column:1;padding:4px 0 32px;margin-top:-34px}
+ .dach{width:min(62vw,260px);margin-bottom:12px}
+ .hero h1{font-size:clamp(27px,7.6vw,34px)}
+ .hero h1 span{font-size:.62em}
+ .hero .lead{margin-top:14px;font-size:16px}
+ .hero .akcje{margin-top:24px}
+ .hero .akcje .btn{width:100%}
+ .hero .podpis{top:auto;bottom:auto;right:16px;font-size:12px;grid-row:1;grid-column:1;align-self:start;position:relative;justify-self:end;margin:72px 0 0;z-index:3}
+ .glowa{grid-template-columns:minmax(0,1fr);gap:16px}
+ .glowa p{font-size:17px}
+ .cechy{grid-template-columns:minmax(0,1fr)}
+ .cecha,.cecha:not(:nth-child(3n+1)),.cecha:nth-child(2n){padding:22px 0;border-left:0}
+ .pas{grid-auto-columns:86%;gap:14px}
+ .uwaga{display:none}
+ .panel{grid-template-columns:minmax(0,1fr)}
+ .plan img{max-height:460px}
+ .lok,.kontakt{grid-template-columns:minmax(0,1fr)}
+ form{grid-template-columns:minmax(0,1fr);padding:22px}
+ .stopka{padding-bottom:96px}
+ .stopka-g{gap:28px 20px}
+ .mob{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;box-shadow:0 -1px 0 var(--linia),0 -8px 20px rgba(0,0,0,.08);transform:translateY(110%);transition:transform .25s}
+ .mob.widac{transform:none}
+ .mob a{min-height:48px;padding:0 12px;font-size:15px}
+ .mob .btn-ciemny{background:#fff;color:var(--granat);border:1px solid #BFC5CE}
+}
+@media (max-width:760px) and (max-height:700px){
+ .hero h1{font-size:clamp(25px,7vw,30px)}
+ .dach{width:min(54vw,220px);margin-bottom:10px}
+ .hero .lead{font-size:15px;line-height:1.5}
+}
+@media (min-width:761px) and (max-height:820px){
+ .hero h1{font-size:clamp(32px,3.8vw,54px)}
+ .hero-in{padding-bottom:56px}
+}
+@media (min-width:1800px){
+ body{font-size:18px}
+ .top .wrap{height:92px}
+ .logo{width:140px;height:80px}
+ .menu a,.tel{font-size:17px}
+ .hero h1{font-size:clamp(64px,3.6vw,92px)}
+ .hero .lead{font-size:21px}
+ .btn{min-height:58px;font-size:17px;padding:0 34px}
+ .glowa p,.lok p.lead,.kontakt .lead{font-size:20px}
+ .cecha p{font-size:17px}
+ h3{font-size:21px}
+ .pas{grid-auto-columns:calc((100% - 2*24px)/3);gap:24px}
+ .plan img{max-height:760px}
+ .pom,.panel .opis{max-width:720px}
+ .pom li{font-size:19px;padding:17px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="top" id="top">
+ <div class="wrap">
+  <a class="logo" href="#"><span>1Home4You - strona główna</span></a>
+  <nav class="menu" id="menu" aria-label="Menu główne">
+   <a href="#osiedle">Osiedle Nowy Bobrów</a>
+   <a href="#wizualizacje">Wizualizacje</a>
+   <a href="#rzuty">Rzuty domu</a>
+   <a href="#lokalizacja">Lokalizacja</a>
+   <a href="#kontakt">Kontakt</a>
+  </nav>
+  <a class="tel" href="tel:+48792915917"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 2.5h3l1.5 4-2 1.3a10 10 0 0 0 5.7 5.7l1.3-2 4 1.5v3a1.5 1.5 0 0 1-1.5 1.5A15 15 0 0 1 2.5 4 1.5 1.5 0 0 1 4 2.5Z"/></svg><span>792 915 917</span></a>
+  <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12 12 5l9 7M5 17h14M5 21h14"/></svg></button>
+ </div>
+</header>
+
+<main id="tresc">
+<section class="hero" aria-label="1Home4You">
+ <picture>
+  <source media="(max-width:760px)" srcset="img/hero-m-480.webp 480w, img/hero-m-760.webp 760w, img/hero-m-1000.webp 1000w" sizes="100vw">
+  <img src="img/hero-1600.webp" srcset="img/hero-960.webp 960w, img/hero-1280.webp 1280w, img/hero-1600.webp 1600w, img/hero-1920.webp 1920w" sizes="100vw" width="1920" height="1024" alt="Dom w zabudowie bliźniaczej na osiedlu Nowy Bobrów - wizualizacja od frontu, z garażami i podjazdem" fetchpriority="high" decoding="async">
+ </picture>
+ <div class="hero-in wrap">
+  <svg class="dach" viewBox="0 0 430 64" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M2 62 215 3l213 59"/></svg>
+  <h1>Domy w zabudowie bliźniaczej pod Legnicą<span>Jeden dom, zbudowany dla Ciebie</span></h1>
+  <p class="lead">Osiedle Nowy Bobrów, niecałe 5 minut drogi od centrum Legnicy. Dom z garażem, ogród na działce ponad 4 ary, a prąd, woda i kanalizacja są już doprowadzone.</p>
+  <div class="akcje">
+   <a class="btn" href="#kontakt">Zapytaj o dom <svg viewBox="0 0 18 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M1 6h15M11 1l5 5-5 5"/></svg></a>
+  </div>
+ </div>
+ <p class="podpis">Wizualizacja osiedla Nowy Bobrów</p>
+</section>
+
+<section class="sek" id="osiedle">
+ <div class="wrap">
+  <div class="glowa">
+   <h2>Osiedle Nowy Bobrów</h2>
+   <p>Nasza najnowsza realizacja w Bobrowie pod Legnicą. Domy budujemy z myślą o jednej rodzinie: z własnym wejściem, garażem, tarasem i ogrodem.</p>
+  </div>
+  <div class="cechy">
+   <div class="cecha"><svg class="okno" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="8" height="8"/><rect x="12" y="2" width="8" height="8"/><rect x="2" y="12" width="8" height="8"/><rect x="12" y="12" width="8" height="8"/></svg><div><h3>Dogodna lokalizacja</h3><p>Niecałe 5 minut drogi od centrum Legnicy. Dobre skomunikowanie z drogą ekspresową w kierunku Lubina oraz autostradą A4.</p></div></div>
+   <div class="cecha"><svg class="okno" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="8" height="8"/><rect x="12" y="2" width="8" height="8"/><rect x="2" y="12" width="8" height="8"/><rect x="12" y="12" width="8" height="8"/></svg><div><h3>Energooszczędność</h3><p>Trzyszybowe okna i grafitowy styropian grubości 20 cm. Komfort na co dzień i niskie rachunki.</p></div></div>
+   <div class="cecha"><svg class="okno" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="8" height="8"/><rect x="12" y="2" width="8" height="8"/><rect x="2" y="12" width="8" height="8"/><rect x="12" y="12" width="8" height="8"/></svg><div><h3>Ekologia</h3><p>Nowoczesne i bezobsługowe źródło ogrzewania o niskim zużyciu energii. Duża część działki to teren biologicznie czynny.</p></div></div>
+   <div class="cecha"><svg class="okno" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="8" height="8"/><rect x="12" y="2" width="8" height="8"/><rect x="2" y="12" width="8" height="8"/><rect x="12" y="12" width="8" height="8"/></svg><div><h3>Media na miejscu</h3><p>Nie musisz się o nic martwić. Prąd, woda i kanalizacja są już doprowadzone.</p></div></div>
+   <div class="cecha"><svg class="okno" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="8" height="8"/><rect x="12" y="2" width="8" height="8"/><rect x="2" y="12" width="8" height="8"/><rect x="12" y="12" width="8" height="8"/></svg><div><h3>Nowoczesny design</h3><p>Elewacja w nowoczesnych kolorach z antracytowymi elementami oraz akcentami drewnopodobnymi.</p></div></div>
+   <div class="cecha"><svg class="okno" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="8" height="8"/><rect x="12" y="2" width="8" height="8"/><rect x="2" y="12" width="8" height="8"/><rect x="12" y="12" width="8" height="8"/></svg><div><h3>Własny ogród</h3><p>Działka o powierzchni ponad 4 arów, ogrodzona z trzech stron. Podjazd i taras utwardzone kostką brukową.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="sek szara" id="wizualizacje">
+ <div class="wrap">
+  <div class="glowa">
+   <h2>Tak będzie wyglądać Twoja okolica</h2>
+   <p>Front z garażami, ogród z tarasem i całe osiedle z lotu ptaka. Zdjęcia przesuniesz palcem lub myszą, a kliknięte otworzą się w powiększeniu.</p>
+  </div>
+  <div class="pas-wrap">
+   <div class="pas" id="pas" tabindex="0" aria-label="Wizualizacje osiedla">
+    <figure><button type="button" data-duze="img/v-ulica-1400.webp"><img src="img/v-ulica-700.webp" srcset="img/v-ulica-700.webp 700w, img/v-ulica-1400.webp 1400w" sizes="(max-width:760px) 86vw, 42vw" width="700" height="373" alt="Ulica osiedla Nowy Bobrów z szeregiem domów - wizualizacja" loading="lazy" decoding="async"></button><figcaption>Ulica osiedla</figcaption></figure>
+    <figure><button type="button" data-duze="img/v-lot2-700.webp"><img src="img/v-lot2-700.webp" width="700" height="420" alt="Dom w zabudowie bliźniaczej od frontu, dwa garaże - wizualizacja" loading="lazy" decoding="async"></button><figcaption>Front domu z garażami</figcaption></figure>
+    <figure><button type="button" data-duze="img/v-tyl-1400.webp"><img src="img/v-tyl-700.webp" srcset="img/v-tyl-700.webp 700w, img/v-tyl-1400.webp 1400w" sizes="(max-width:760px) 86vw, 42vw" width="700" height="373" alt="Dom od strony ogrodu z tarasem - wizualizacja" loading="lazy" decoding="async"></button><figcaption>Taras i ogród</figcaption></figure>
+    <figure><button type="button" data-duze="img/v-lot3-700.webp"><img src="img/v-lot3-700.webp" width="700" height="420" alt="Ogród za domem ogrodzony z trzech stron - wizualizacja" loading="lazy" decoding="async"></button><figcaption>Ogród ogrodzony z trzech stron</figcaption></figure>
+    <figure><button type="button" data-duze="img/v-lot-700.webp"><img src="img/v-lot-700.webp" width="700" height="525" alt="Osiedle Nowy Bobrów z lotu ptaka - wizualizacja" loading="lazy" decoding="async"></button><figcaption>Osiedle z lotu ptaka</figcaption></figure>
+   </div>
+   <div class="ster">
+    <button type="button" id="wstecz" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M17 10H3M8 5l-5 5 5 5"/></svg></button>
+    <button type="button" id="dalej" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 10h14M12 5l5 5-5 5"/></svg></button>
+    <span class="licznik" id="licznik">1 / 5</span>
+    <span class="uwaga">Wizualizacje projektu</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="rzuty" id="rzuty">
+ <div class="wrap">
+  <div class="glowa">
+   <h2>Rzuty domu</h2>
+   <p>Parter z pokojem dziennym, kuchnią i garażem. Piętro w dwóch wersjach: z garderobą albo z czterema pokojami.</p>
+  </div>
+  <div class="zakl" role="tablist" aria-label="Kondygnacje">
+   <button role="tab" id="t1" aria-controls="p1" aria-selected="true">Parter</button>
+   <button role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Piętro - wersja z garderobą</button>
+   <button role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Piętro - wersja z 4 pokojami</button>
+  </div>
+  <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
+   <div class="plan"><button type="button" data-duze="img/r-parter-840.webp"><img src="img/r-parter-420.webp" srcset="img/r-parter-420.webp 420w, img/r-parter-840.webp 840w" sizes="(max-width:760px) 210px, 280px" width="420" height="937" alt="Rzut parteru domu" loading="lazy" decoding="async"></button></div>
+   <div>
+    <p class="metraz">76,73<small>m²</small></p>
+    <h3>Parter</h3>
+    <ul class="pom">
+     <li><b>1</b><span>Wiatrołap</span><span></span></li>
+     <li><b>2</b><span>Pomieszczenie gospodarcze</span><span></span></li>
+     <li><b>3</b><span>Łazienka</span><span></span></li>
+     <li><b>4</b><span>Pokój dzienny z kuchnią</span><span></span></li>
+     <li><b>5</b><span>Garaż</span><span></span></li>
+     <li><b>6</b><span>Klatka schodowa</span><span></span></li>
+    </ul>
+    <p class="opis">Z pokoju dziennego wychodzi się prosto na taras i do ogrodu.</p>
+   </div>
+  </div>
+  <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+   <div class="plan"><button type="button" data-duze="img/r-pietro1-840.webp"><img src="img/r-pietro1-420.webp" srcset="img/r-pietro1-420.webp 420w, img/r-pietro1-840.webp 840w" sizes="(max-width:760px) 260px, 350px" width="420" height="743" alt="Rzut piętra - wersja z trzema pokojami i garderobą" loading="lazy" decoding="async"></button></div>
+   <div>
+    <p class="metraz">65,37<small>m²</small></p>
+    <h3>Piętro - 3 pokoje i garderoba</h3>
+    <ul class="pom">
+     <li><b>1</b><span>Komunikacja</span><span>4,72 m²</span></li>
+     <li><b>2</b><span>Pokój</span><span>13,76 m²</span></li>
+     <li><b>3</b><span>Pokój</span><span>13,32 m²</span></li>
+     <li><b>4</b><span>Łazienka</span><span>8,15 m²</span></li>
+     <li><b>5</b><span>Garderoba</span><span>7,50 m²</span></li>
+     <li><b>6</b><span>Pokój</span><span>17,92 m²</span></li>
+    </ul>
+   </div>
+  </div>
+  <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+   <div class="plan"><button type="button" data-duze="img/r-pietro2-840.webp"><img src="img/r-pietro2-420.webp" srcset="img/r-pietro2-420.webp 420w, img/r-pietro2-840.webp 840w" sizes="(max-width:760px) 260px, 350px" width="420" height="759" alt="Rzut piętra - wersja z czterema pokojami" loading="lazy" decoding="async"></button></div>
+   <div>
+    <p class="metraz">65,39<small>m²</small></p>
+    <h3>Piętro - 4 pokoje</h3>
+    <ul class="pom">
+     <li><b>1</b><span>Komunikacja</span><span>4,72 m²</span></li>
+     <li><b>2</b><span>Pokój</span><span>13,76 m²</span></li>
+     <li><b>3</b><span>Pokój</span><span>13,32 m²</span></li>
+     <li><b>4</b><span>Łazienka</span><span>8,15 m²</span></li>
+     <li><b>5</b><span>Pokój</span><span>12,42 m²</span></li>
+     <li><b>6</b><span>Pokój</span><span>12,90 m²</span></li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sek" id="lokalizacja">
+ <div class="wrap lok">
+  <div class="lok-foto">
+   <figure><img src="img/v-lot-700.webp" width="700" height="525" alt="Osiedle Nowy Bobrów wśród zieleni - wizualizacja z lotu ptaka" loading="lazy" decoding="async"></figure>
+   <figure><img src="img/mapka-520.webp" width="520" height="636" alt="Położenie osiedla Nowy Bobrów na zdjęciu satelitarnym" loading="lazy" decoding="async"></figure>
+  </div>
+  <div>
+   <h2>Spokojnie, a blisko miasta</h2>
+   <p class="lead">Bobrów leży tuż za Legnicą. Do miasta, szkoły czy pracy dojeżdża się w kilka minut, a za oknem jest zieleń.</p>
+   <ul>
+    <li><svg class="okno" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="8" height="8"/><rect x="12" y="2" width="8" height="8"/><rect x="2" y="12" width="8" height="8"/><rect x="12" y="12" width="8" height="8"/></svg><span>Niecałe 5 minut drogi od centrum Legnicy</span></li>
+    <li><svg class="okno" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="8" height="8"/><rect x="12" y="2" width="8" height="8"/><rect x="2" y="12" width="8" height="8"/><rect x="12" y="12" width="8" height="8"/></svg><span>Dobry dojazd do drogi ekspresowej w kierunku Lubina</span></li>
+    <li><svg class="okno" viewBox="0 0 22 22" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="8" height="8"/><rect x="12" y="2" width="8" height="8"/><rect x="2" y="12" width="8" height="8"/><rect x="12" y="12" width="8" height="8"/></svg><span>Szybki wjazd na autostradę A4</span></li>
+   </ul>
+   <a class="btn btn-ciemny" href="https://www.google.com/maps/search/?api=1&amp;query=Bobr%C3%B3w%2C%20Legnica" target="_blank" rel="noopener">Otwórz w Mapach Google</a>
+  </div>
+ </div>
+</section>
+
+<section class="sek szara" id="kontakt">
+ <div class="wrap kontakt">
+  <div>
+   <h2>Porozmawiajmy o Twoim domu</h2>
+   <p class="lead">1Home4You Sp. z o.o. to firma z Jakuszowa pod Legnicą, która buduje domy mieszkalne. Chętnie pokażemy rzuty, odpowiemy na pytania o dom i działkę oraz umówimy się na osiedlu.</p>
+   <div class="dane">
+    <a class="duzy" href="tel:+48792915917">+48 792 915 917</a>
+    <a href="mailto:biuro@1home4you.pl">biuro@1home4you.pl</a>
+    <span class="adr">1Home4You Sp. z o.o.<br>Jakuszów 18, 59-222 Miłkowice</span>
+   </div>
+   <a class="fb" href="https://www.facebook.com/Osiedle-Nowy-Bobr%C3%B3w-LegnicaBobr%C3%B3w-104159648658494" target="_blank" rel="noopener">Postęp budowy na Facebooku</a>
+  </div>
+  <form id="formularz" novalidate>
+   <h3>Zapytaj o dom</h3>
+   <label>Imię i nazwisko<input name="imie" autocomplete="name"></label>
+   <label>Telefon<input name="tel" type="tel" autocomplete="tel" inputmode="tel"></label>
+   <label class="cale">E-mail<input name="mail" type="email" autocomplete="email"></label>
+   <label class="cale">Interesuje mnie
+    <select name="temat"><option>Dom na osiedlu Nowy Bobrów</option><option>Rzuty i powierzchnie</option><option>Termin oddania i odbiór</option><option>Inne pytanie</option></select>
+   </label>
+   <label class="cale">Wiadomość<textarea name="wiad" rows="4"></textarea></label>
+   <label class="zgoda cale"><input type="checkbox" name="zgoda">Zgadzam się na kontakt w sprawie mojego zapytania.</label>
+   <div class="cale"><button class="btn" type="submit">Wyślij zapytanie</button></div>
+   <p class="info">Formularz pokazowy - w tym podglądzie nic nie jest wysyłane.</p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="stopka">
+ <div class="wrap">
+  <div class="stopka-g">
+   <div><a class="logo" href="#"><span>1Home4You</span></a></div>
+   <div><h4>Osiedle</h4><ul><li><a href="#osiedle">Nowy Bobrów</a></li><li><a href="#wizualizacje">Wizualizacje</a></li><li><a href="#rzuty">Rzuty domu</a></li><li><a href="#lokalizacja">Lokalizacja</a></li></ul></div>
+   <div><h4>Kontakt</h4><ul><li><a href="tel:+48792915917">+48 792 915 917</a></li><li><a href="mailto:biuro@1home4you.pl">biuro@1home4you.pl</a></li></ul></div>
+   <div><h4>Biuro</h4><ul><li>1Home4You Sp. z o.o.</li><li>Jakuszów 18</li><li>59-222 Miłkowice</li></ul></div>
+  </div>
+  <div class="stopka-d">
+   <span>&copy; 2026 1Home4You Sp. z o.o.</span>
+   <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=1home4you.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+
+  </div>
+ </div>
+</footer>
+
+<div class="mob" id="mob"><a class="btn btn-ciemny" href="tel:+48792915917">Zadzwoń</a><a class="btn" href="#kontakt">Zapytaj o dom</a></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększenie zdjęcia">
+ <img id="lb-img" alt="">
+ <button class="zamk" type="button" aria-label="Zamknij"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4l12 12M16 4 4 16"/></svg></button>
+ <button class="pop" type="button" aria-label="Poprzednie"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M17 10H3M8 5l-5 5 5 5"/></svg></button>
+ <button class="nast" type="button" aria-label="Następne"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 10h14M12 5l5 5-5 5"/></svg></button>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
